@@ -1,0 +1,535 @@
+/*  Colors */
+
+:root{
+    --light-color: #FAFDFF;
+    --blue-light-color: #4C788D;
+    --dark-blue-color: #222D34;
+    --yellow-color: #D2E69C;
+
+    --light-color-hover: #B2BBBF;
+    --blue-light-hover: #466574;
+
+    --blue-bg: #4C788D;
+    --dark-bg: #222D34;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Dancing Script", sans-serif;
+    background: url(images/BG-Page1.png);
+    background-position-x: center;
+}
+
+.wrapper {
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+/* Header - Navigation */
+
+.desktop-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 1;
+    border-bottom: 1px solid var(--light-color-hover);
+    padding: 16px 60px;
+    position: fixed;
+    z-index: 200;
+    width: 1240px;
+}
+
+.desktop-nav .menu-items {
+    display: flex;
+    list-style: none;
+}
+
+.desktop-nav .menu-items li{
+    margin: 0 28px; 
+}
+
+.desktop-nav .menu-items li a{
+    text-decoration: none;
+    color: var(--light-color);
+    font-family: "Bebas Neue";
+    font-size: 36px;
+    position: relative;
+}
+
+.desktop-nav .menu-items li a.active {
+    border-bottom: 3px solid #C9EDFF;
+    padding: 17px;
+}
+
+/* First Page */
+.first-page {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding: 0 428px;
+    padding-top: 190px;
+    position: relative;
+}
+
+.first-page .center p {
+    color: var(--light-color);
+    font-size: 96px;
+}
+
+.first-page .center h1 {
+    color: var(--light-color);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 288px; 
+}
+
+a.btn {
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 19px;
+    letter-spacing: .05em;
+    font-family: "Bebas Neue";
+}
+
+section a.btn {
+    display: inline-block;
+}
+
+a.btn.white {
+    background-color: var(--light-color);
+    color: var(--blue-light-color);
+    padding: 15px 15px;
+}
+
+a.btn.white:hover {
+    background-color: var(--light-color-hover);
+}
+
+a.btn.blue {
+    background-color: var(--blue-light-color);
+    color: var(--light-color);
+    padding: 15px 36px;
+}
+
+a.btn.blue:hover{
+    background-color: var(--blue-light-hover) ;
+}
+
+.first-page .center .kuliner {
+    color: var(--yellow-color);
+}
+
+.first-page .bg {
+    position: absolute;
+    padding: auto 0;
+}
+
+
+/* Animation */
+
+.desktop-nav {
+    animation: fadeDown 1000ms forwards;
+    opacity: 0;
+}
+
+@keyframes fadeDown {
+    from{
+        opacity:0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.first-page .center p{
+    animation: fadeIn 800ms forwards;
+    opacity: 0;
+    animation-delay: 400ms;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.first-page .center h1{
+    animation:  fadeToRight 800ms forwards cubic-bezier(0.22, 0.32, 0, 1.54);
+    opacity: 0;
+    animation-delay: 800ms;
+}
+
+@keyframes fadeToRight {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.first-page .center .btn:nth-of-type(1) {
+    animation: fadeIn 1000ms forwards;
+    opacity: 0;
+    animation-delay: 1400ms;
+}
+
+.first-page .center .btn:nth-of-type(2) {
+    animation: fadeIn 1000ms forwards;
+    opacity: 0;
+    animation-delay: 1600ms;
+}
+/* End of First Page */
+
+/* Second Page */
+.second-page {
+    background: var(--blue-bg);
+    padding: 122px 8px;
+    margin-top: 200px;
+}
+
+.second-page .content {
+    margin-top: 91px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.second-page .header h1{
+    font-family: "Cantata One", sans-serif;
+    font-size: 48px;
+    color: var(--light-color);
+    padding: 0 0;
+    text-align: center;
+    line-height: 150%;
+}
+
+.second-page .header .dan {
+    color: var(--yellow-color);
+    font-family: "Dancing Script", sans-serif;
+}
+
+.paragraph {
+    font-family: "Poppins", sans-serif;
+    font-size: 21px;
+    line-height: 150%;
+    color: var(--light-color);
+    text-align: center;
+    margin-top: 23px;
+}
+/* End of Second Page */
+
+/* Third Page */
+.third-page {
+    background: url(images/BG-Page3.png);
+    padding: 175px 67px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.third-page .left {
+    margin-top: -50px;
+}
+
+.third-page .left .header h1 {
+    font-family: "Cantata One", sans-serif;
+    font-size: 48px;
+    color: var(--light-color);
+    line-height: 150%;
+
+}
+
+.third-page .left .header .beraneka {
+    font-family: "Dancing Script", sans-serif;
+}
+
+.third-page .left .header .khas {
+    color: var(--yellow-color);
+}
+
+.third-page .left .para {
+    font-family: "Poppins", sans-serif;
+    font-size: 21px;
+    line-height: 150%;
+    color: var(--light-color);
+    padding-top: 58px;
+    padding-bottom: 76px;
+}
+
+.third-page .left .btn .kuliner {
+    color: var(--yellow-color);
+}
+/* End of Third Page */
+
+/* Footer */
+.footer {
+    background: var(--dark-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 67px;
+}
+
+.footer .left {
+    color: var(--light-color);
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+
+.footer .p p{
+    padding: 5px auto;
+    color: var(--light-color);
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+
+.footer .pp p{
+    padding-top: 33px;
+}
+
+.footer .center .title {
+    font-family: "Bebas Neue", sans-serif;
+    color: var(--light-color);
+    letter-spacing: .06em;
+    margin-top: -85px;
+    padding-bottom: 5px;
+}
+
+.footer .right .title {
+    font-family: "Bebas Neue", sans-serif;
+    color: var(--light-color);
+    letter-spacing: .06em;
+    margin-top: -45px;
+}
+
+.footer .right .po {
+    padding-top: 5px;
+}
+
+.cop {
+    background: var(--dark-bg);
+    padding: 25px 67px;
+    padding-right: 160px;
+}
+/* End of Footer */
+
+.desktop-nav .menu-icon {
+    display: none;
+}
+/* Media Queries */
+
+@media (max-width: 650px) {   
+    .wrapper {
+        padding: 0 auto;
+    }
+
+    .desktop-nav .menu-items {
+        display: none;
+    }
+
+    .desktop-nav .right {
+        display: none;
+    }
+
+    .desktop-nav {
+        width: 100%;
+        padding: 11px 30px;
+    }
+
+    .desktop-nav .logo img {
+        height: 36px;
+    }
+
+    .desktop-nav .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+    /* End of Desk Nav */
+
+    .first-page{
+        padding: 0 120px;
+        padding-top: 192px;
+    }
+
+    a.btn {
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+        padding: 12px 0;
+    }
+
+    a.btn.white {
+        margin-bottom: 10px;
+    }
+
+    .first-page .center p {
+        font-size: 48px;
+    }
+
+    .first-page .center h1 {
+        font-size: 144px;
+    }
+
+    a.btn {
+        font-size: 16px;
+        flex-direction: column;
+    }
+
+    /* Second Page */
+
+    .second-page .header h1{
+        padding-left: 0;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .second-page .content {
+        flex-direction: column;
+    }
+
+    .second-page .content img{
+        height: 200px;
+    }
+    /* End of Second Page */
+
+    /* Third Page */
+
+    .third-page .right {
+        display: none;
+    }
+
+    .third-page .left .header h1{
+        font-size: 24px;
+    }
+
+    .third-page .left .para {
+        font-size: 16px;
+    }
+    /* End of Third Page */
+
+    /* Footer */
+    .footer {
+        flex-direction: column;
+        padding: 50px 0;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .footer .center {
+        padding-top: 125px;
+    }
+
+    .footer .right {
+        padding-top: 100px;
+    }
+
+    .footer .title {
+        font-size: 25px;
+    }
+
+    /* Mobile Nav */
+
+    .mobile-nav {
+        display: flex;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: var(--dark-bg);
+        right: 0;
+        z-index: 200;
+
+        opacity: 0;
+        pointer-events: none;
+        right: -100%;
+        transition: 400ms;
+    }
+
+    .mobile-nav.active {
+        opacity: 1;
+        pointer-events: auto;
+        right: 0;
+    }
+
+    .mobile-nav .menu-items {
+        list-style: none;
+        padding: 0;
+    }
+
+    .mobile-nav .menu-items li{
+        margin: 24px 0;
+    }
+
+    .mobile-nav .menu-items li a{
+        color: var(--light-color);
+        text-decoration: none;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 20px;
+    }
+    .notfound img{
+        height: 200px;
+    }
+    
+    .penjelasan{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .penjelasan .left .img {
+        display: none;
+    }
+}
+/* End */
+
+
+
+
+
+
+
+/* Not Found */
+
+.notfound {
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column; 
+}
+
+.notfound .btn {
+    margin: 15px 0;
+}
+
+
+/* Betutu */
+
+.penjelasan {
+    /* background-color:  var(--blue-light-hover) ; */
+    margin: 50px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
